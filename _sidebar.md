@@ -1,4 +1,3 @@
-# Hi
 - 2G Trouble Shooting
   - [Circuit Switch](2gCircuitSwitch.md)
     - [I. Call drops during handovers (BSC–MSC)](call-drop-during-handover.md)
