@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Troubleshooting Steps for 2G, 3G, 4G and 5G</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+
+    const PASSWORD = "mysecret123";
+
+    let entered = localStorage.getItem("docsify_auth_ok");
+    
+    if (!entered) {
+      let pass = prompt("Enter password to access documentation:");
+      if (pass !== PASSWORD) {
+        alert("Incorrect password. Access denied.");
+        window.location.reload();
+      } else {
+        localStorage.setItem("docsify_auth_ok", "true");
+      }
+    }
+
+    window.$docsify = {
+      name: '<img src="Images/Logo.png" alt="Company Logo" >',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      routerMode:'hash'
+    }   
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+</body>
+</html>
