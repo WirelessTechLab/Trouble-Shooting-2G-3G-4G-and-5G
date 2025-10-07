@@ -11,21 +11,6 @@
 <body>
   <div id="app"></div>
   <script>
-
-    const PASSWORD = "mysecret123";
-
-    let entered = localStorage.getItem("docsify_auth_ok");
-    
-    if (!entered) {
-      let pass = prompt("Enter password to access documentation:");
-      if (pass !== PASSWORD) {
-        alert("Incorrect password. Access denied.");
-        window.location.reload();
-      } else {
-        localStorage.setItem("docsify_auth_ok", "true");
-      }
-    }
-
     window.$docsify = {
       name: '<img src="Images/Logo.png" alt="Company Logo" >',
       repo: '',
